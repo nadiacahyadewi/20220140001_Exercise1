@@ -1,0 +1,116 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Metamorphous&family=Signika:wght@300..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Signika', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: palevioletred;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: -8px 1px 15px grey;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card h4 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card .description {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: bottom 0.3s ease;
+}
+
+.card.open .description {
+    bottom: 0;
+}
+
+p {
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: "Chela One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+  button {
+    background-color: #2f238a; 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 50px 50px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    top: 60px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  }
+  
+  button:hover {
+    background-color: #d546ef; 
+  }
+
+  

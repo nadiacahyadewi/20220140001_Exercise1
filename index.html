@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Gunung</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Mengubah lebar kartu */
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card h4 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .card .description {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: bottom 0.3s ease;
+        }
+
+        .card.open .description {
+            bottom: 0;
+        }
+
+        
+    </style>
+</head>
+<body>
+    
+    <br>
+    <br>
+    <h1 style="text-align: center;">
+        <span style="color: black; text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">3 Gunung</span>
+        <span style="color: #138d46; text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">Tertinggi</span>
+        <span style="color: black; text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);">Di Indonesia</span>
+    </h1>
+    <p>ada banyak gunung tertinggi yang menjadi tempat favorit bagi para pendaki gunung untuk dijelajahi. <br>Nah, berikut ini 3 gunung tertinggi di Indonesia yang wajib kalian ketahui dan semuanya terletak di Papua loh.</p>
+
+    <div class="container">
+        <div class="card" onclick="toggleDescription(this)">
+            <img src="./assets/img3.jpg" alt="Gunung Jaya Wijaya">
+            <h4>Gunung Jaya Wijaya</h4>
+            <div class="click-info">Klik untuk info lebih lanjut</div>
+            <div class="description">
+                Puncak Jaya Wijaya adalah puncak tertinggi di Indonesia yang terletak di Provinsi Papua. memiliki ketinggian 4.884 Mdpl dan dikelilingi oleh gletser tropis yang disebut Gletser Carstensz. Gletser ini satu-satunya gletser tropis di Indonesia. Puncak Jaya Wijaya juga termasuk dalam 7 puncak tertinggi di dunia (seven summit). pendakian ke puncak ini perlu persiapan ekstra.
+            </div>
+        </div>
+        <div class="card" onclick="toggleDescription(this)">
+            <img src="./assets/img2.jpg" alt="Puncak Mandala">
+            <h4>Puncak Mandala</h4>
+            <div class="click-info">Klik untuk info lebih lanjut</div>
+            <div class="description">
+                Dengan ketinggian 4.760 mdpl, Puncak Mandala adalah gunung tertinggi ke-2 di Indonesia setelah Puncak Jaya. Puncak Mandala membentuk bagian Pegunungan Bintang bagian timur dan berada dekat perbatasan Papua Nugini. Puncak ini dulunya ditutupi oleh salju, namun, akibat pemanasan global, salju digunung ini perlahan mulai menghilang.
+            </div>
+        </div>
+        <div class="card" onclick="toggleDescription(this)">
+            <img src="./assets/img1.jpg" alt="Puncak Trikora">
+            <h4>Puncak Trikora</h4>
+            <div class="click-info">Klik untuk info lebih lanjut</div>
+            <div class="description">
+                Puncak Trikora atau Ettiakup adalah gunung tertinggi ke-3, terdapat di Papua. dengan ketinggian 4.751 mdpl, Puncak ini mempunyai kawasan hutan Dipterokarp Bukit, hutan Dipterokarp Atas, hutan Montane, dan Hutan Ericaceous/hutan gunung.Jalur pendakian yang curam, sering dianggap lebih sulit daripada Jayawijaya
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDescription(card) {
+            card.classList.toggle('open');
+        }
+    </script>
+    
+    <div class="button">
+        <center><button onclick="showPopup()">Click Me!!!</button></center>
+    </div>
+
+    <script>
+        function toggleDescription(card) {
+            card.classList.toggle('open');
+        }
+
+        function showPopup() {
+            alert("Gimana menarik bukan? Jadi berani tidak mendaki ke 3 Gunung tersebut?");
+        }
+    </script>
+    
+    <div class="audio-container">
+        <audio id="audio" controls autoplay loop>
+            <source src="assets/music1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+
+</body>
+</html>
